@@ -31,6 +31,20 @@ h1 {
     font-weight: 700;
 }
 
+.current-time {
+    margin-bottom: 30px;
+    padding: 12px 20px;
+    background: #f0f7ff;
+    border-radius: 10px;
+}
+
+#current-time-display {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #667eea;
+    font-family: 'Courier New', monospace;
+}
+
 .timer-display {
     margin: 40px 0;
     padding: 40px 20px;

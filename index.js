@@ -55,7 +55,20 @@ function initializeTimer() {
     updateDisplay();
 }
 
+function updateCurrentTime() {
+    const now = new Date();
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    const seconds = String(now.getSeconds()).padStart(2, '0');
+    const timeDisplay = document.getElementById('current-time-display');
+    if (timeDisplay) {
+        timeDisplay.textContent = `${hours}:${minutes}:${seconds}`;
+    }
+}
+
 // Initialize display on page load
 document.addEventListener('DOMContentLoaded', function() {
     initializeTimer();
+    updateCurrentTime();
+    setInterval(updateCurrentTime, 1000);
 });
